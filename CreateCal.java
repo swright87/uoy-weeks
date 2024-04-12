@@ -8,13 +8,13 @@ public class CreateCal {
         Semester s2022_1 = new Semester("26/09/2022", "02/12/2022");
         Semester s2022_2 = new Semester("09/01/2023", "17/03/2023");
         Semester s2022_3 = new Semester("17/04/2023", "23/06/2023");
-        
+
         Semester s2023_1 = new Semester("18/09/2023", "02/02/2024", "18/12/2023", "05/01/2024", 6);
         Semester s2023_2 = new Semester("05/02/2024", "07/06/2024", "25/03/2024", "05/04/2024");
-        
+
         Semester s2024_1 = new Semester("16/09/2024", "31/01/2025", "16/12/2024", "03/01/2025", 6);
-        Semester s2024_2 = new Semester("03/02/2025", "06/06/2025", "07/04/2025", "21/04/2025");
-        
+        Semester s2024_2 = new Semester("03/02/2025", "06/06/2025", "07/04/2025", "18/04/2025");
+
         //System.out.println(s2022_1);
         System.out.print(Semester.iCalHeader());
 
@@ -33,7 +33,7 @@ public class CreateCal {
 }
 
 class Semester {
-    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");  
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     private static SimpleDateFormat icf = new SimpleDateFormat("yyyyMMdd");  // format for iCal
 
     Date start_date;
@@ -54,7 +54,7 @@ class Semester {
     public Semester(String s, String e, String v_s, String v_e) throws Exception {
         this(s, e, v_s, v_e, -1);
     }
-    
+
     public Semester(String s, String e, String v_s, String v_e, int cons_week) throws Exception {
         start_date = sdf.parse(s);
         end_date = sdf.parse(e);
