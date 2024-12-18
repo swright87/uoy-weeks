@@ -15,6 +15,13 @@ public class CreateCal {
         Semester s2024_1 = new Semester("16/09/2024", "31/01/2025", "16/12/2024", "03/01/2025", 6);
         Semester s2024_2 = new Semester("03/02/2025", "06/06/2025", "07/04/2025", "18/04/2025");
 
+        Semester s2025_1 = new Semester("15/09/2025", "30/01/2026", "15/12/2025", "02/01/2026", 6);
+        Semester s2025_2 = new Semester("02/02/2026", "05/06/2026", "30/03/2026", "10/04/2026");
+
+        Semester s2026_1 = new Semester("21/09/2026", "05/02/2027", "21/12/2026", "08/01/2027", 6);
+        Semester s2026_2 = new Semester("08/02/2027", "11/06/2027", "22/03/2027", "02/04/2027");
+
+
         //System.out.println(s2022_1);
         System.out.print(Semester.iCalHeader());
 
@@ -27,6 +34,12 @@ public class CreateCal {
 
         System.out.print(s2024_1);
         System.out.print(s2024_2);
+
+        System.out.print(s2025_1);
+        System.out.print(s2025_2);
+
+        System.out.print(s2026_1);
+        System.out.print(s2026_2);
 
         System.out.print(Semester.iCalFooter());
     }
